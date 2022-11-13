@@ -60,6 +60,6 @@ proc clear*(node: ConstructNode) =
 proc construct*(node: ConstructNode): string = 
     var children: seq[string] = @[]
     if node.children.len > 0:
-       for child in node.children:
-          children.add(child.construct)
+        for child in node.children:
+            children.add(child.construct)
     return node.nodetype.fmt.format(node.value, children)
